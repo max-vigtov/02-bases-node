@@ -1,8 +1,6 @@
-const {getAge, getUUID} = require('./plugins');
-
-
 const getPokemonById = require('./js-foundation/06-promises');
 
- console.log(getPokemonById(4, (pokemon) => {
-    console.log(pokemon);
- }));
+getPokemonById(1)
+    .then((pokemon) => console.log({ pokemon }))
+    .catch( ( err ) => console.error( err ))
+    .finally( () => console.log('Finalmente'))
