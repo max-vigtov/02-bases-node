@@ -21,6 +21,7 @@ export function getUserById(id: number, callback: (err?: string, user?: User) =>
   });
 
   if( !user ){
+    
     return callback(`User not found with id ${id}`);
   }
   return callback(undefined, user);
