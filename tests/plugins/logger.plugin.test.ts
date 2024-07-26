@@ -1,5 +1,4 @@
 import { buildLogger, logger as winstonLogger } from '../../src/plugins/logger.plugin';
-import winston from 'winston';
 
 describe('plugins/logger.plugin', () => { 
     test('buildLogger should return a function logger', () => { 
@@ -9,7 +8,7 @@ describe('plugins/logger.plugin', () => {
         expect( typeof logger.log ).toBe('function');
         expect( typeof logger.error ).toBe('function');
 
-     });
+    });
 
     test('Logger.log should log a message', () => { 
         const winstonLoggerMock = jest.spyOn(winstonLogger, 'log');
